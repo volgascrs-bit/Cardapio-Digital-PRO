@@ -12,142 +12,293 @@
 
 <body>
 
-<header class="topo">
-    <h1>🔥 Espetinho D'alu</h1>
-    <p>Sabor que conquista no primeiro pedaço!</p>
-</header>
+    <header class="topo">
+        <h1>🔥 Espetinho D'alu</h1>
+        <p>Sabor que conquista no primeiro pedaço!</p>
+    </header>
 
-<section class="cliente">
+    <section class="cliente">
 
-    <h2>Dados do Cliente</h2>
+        <h2>Dados do Cliente</h2>
 
-    <input type="text" id="nome" placeholder="Seu nome">
+        <input type="text" id="nome" placeholder="Seu nome">
 
-    <input type="text" id="telefone" placeholder="Telefone">
+        <input type="text" id="telefone" placeholder="Telefone">
 
-    <input type="text" id="endereco" placeholder="Endereço">
+        <input type="text" id="endereco" placeholder="Endereço">
 
-    <select id="pagamento">
-        <option>Pix</option>
-        <option>Dinheiro</option>
-        <option>Cartão</option>
-    </select>
+        <select id="pagamento">
+            <option>Pix</option>
+            <option>Dinheiro</option>
+            <option>Cartão</option>
+        </select>
 
-    <textarea id="observacao" placeholder="Observações"></textarea>
+        <textarea id="observacao" placeholder="Observações"></textarea>
 
-</section>
+    </section>
 
-<main>
+    <main>
 
-<h2>Nosso Cardápio</h2>
+        <h2>Nosso Cardápio</h2>
 
-<input
-type="text"
-id="pesquisa"
-placeholder="🔍 Pesquise um produto..."
-onkeyup="pesquisarProdutos()">
+        <input type="text" id="pesquisa" placeholder="🔍 Pesquise um produto..." onkeyup="pesquisarProdutos()">
 
-<div class="categorias">
+        <div class="categorias">
 
-<button onclick="filtrarCategoria('todos')">
-Todos
-</button>
+            <button onclick="filtrarCategoria('todos')">
+                Todos
+            </button>
 
-<button onclick="filtrarCategoria('espetinho')">
-🍢 Espetinhos
-</button>
+            <button onclick="filtrarCategoria('espetinho')">
+                🍢 Espetinhos
+            </button>
 
-<button onclick="filtrarCategoria('bebida')">
-🥤 Bebidas
-</button>
+            <button onclick="filtrarCategoria('bebida')">
+                🥤 Bebidas
+            </button>
 
-<button onclick="filtrarCategoria('promocao')">
-🔥 Promoções
-</button>
+            <button onclick="filtrarCategoria('promocao')">
+                🔥 Promoções
+            </button>
 
-</div>
+            <button onclick="filtrarCategoria('combos')">
+                🔥 Combos
+            </button>
 
-<div class="produtos">
+        </div>
 
-    <div class="card" data-categoria="espetinho">
-    <img src="imagens/Carne.jpg" alt="Espetinho de Carne">
+        <div class="produtos">
 
-    <h3>🍢 Espetnho de Carne</h3>
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/carne.jpg" alt="Espetinho de Carne">
 
-    <p class="preco">R$ 12,00</p>
+                <h3>Espetnho de Carne</h3>
 
-    <button onclick="adicionar('Espetinho de Carne', 12)">
-        Adicionar
-    </button>
-</div>
+                <p class="preco">R$ 12,00</p>
 
-<div class="card" data-categoria="espetinho">
-    <img src="imagens/Frango-com-Bacon.jpg" alt="Espetinho de Frango com Bacon">
+                <button onclick="adicionar('Espetinho de Carne', 12)">
+                    Adicionar
+                </button>
+            </div>
 
-    <h3>🍗 Espetinho de Frango com Bacon</h3>
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/frango-com-bacon.jpg" alt="Espetinho de Frango com Bacon">
 
-    <p class="preco">R$ 10,00</p>
+                <h3>Espetinho de Frango com Bacon</h3>
 
-    <button onclick="adicionar('Espetinho de Frango com Bacon', 10)">
-        Adicionar
-    </button>
-</div>
+                <p class="preco">R$ 10,00</p>
 
-<div class="card" data-categoria="espetinho">
-    <img src="imagens/Linguiça-Mineira.jpg" alt="Espetinho de Linguiça Mineira">
+                <button onclick="adicionar('Espetinho de Frango com Bacon', 10)">
+                    Adicionar
+                </button>
+            </div>
 
-    <h3>🌭 Espetinho de Linguiça Mineira</h3>
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/linguiça-mineira.jpg" alt="Espetinho de Linguiça Mineira">
 
-    <p class="preco">R$ 11,00</p>
+                <h3>Espetinho de Linguiça Mineira</h3>
 
-    <button onclick="adicionar('Espetinho de Linguiça Mineira', 11)">
-        Adicionar
-    </button>
-</div>
+                <p class="preco">R$ 11,00</p>
 
-<div class="card" data-categoria="espetinho">
-    <img src="imagens/Queijo-Coalho.jpg" alt="Espetinho de Queijo Coalho">
+                <button onclick="adicionar('Espetinho de Linguiça Mineira', 11)">
+                    Adicionar
+                </button>
+            </div>
 
-    <h3>🧀 Espetinho de Queijo Coalho</h3>
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/queijo-coalho.jpg" alt="Espetinho de Queijo Coalho">
 
-    <p class="preco">R$ 13,50</p>
+                <h3>Espetinho de Queijo Coalho</h3>
 
-    <button onclick="adicionar('Espetinho de Queijo Coalho', 13.50)">
-        Adicionar
-    </button>
-</div>
+                <p class="preco">R$ 13,50</p>
 
-<div class="card" data-categoria="bebida">
-    <img src="imagens/Coca-Cola-Lata.jpg" alt="Coca-Cola Lata">
+                <button onclick="adicionar('Espetinho de Queijo coalho', 13,50)">
+                    Adicionar
+                </button>
+            </div>
 
-    <h3>🥤 Coca-Cola Lata</h3>
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/misto.jpg" alt="Espetinho Misto">
 
-    <p class="preco">R$ 7,00</p>
+                <h3>Espetinho Misto</h3>
 
-    <button onclick="adicionar('Coca-Cola Lata', 7)">
-        Adicionar
-    </button>
-</div>
+                <p class="preco">R$ 12,00</p>
 
-<div id="carrinho">
+                <button onclick="adicionar('Espetinho Misto', 12)">
+                    Adicionar
+                </button>
+            </div>
 
-    <h2>🛒 Carrinho</h2>
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/kafta.jpg" alt="Espetinho de Kafta">
 
-    <div id="lista"></div>
+                <h3>Espetinho de Kafta</h3>
 
-    <p>
-        <strong>Total: R$ <span id="total">0.00</span></strong>
-    </p>
+                <p class="preco">R$ 12,00</p>
 
-    <button onclick="finalizarPedido()">
-        📲 Finalizar Pedido
-    </button>
+                <button onclick="adicionar('Espetinho de Kafta', 12)">
+                    Adicionar
+                </button>
+            </div>
 
-</div>
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/tulipa.png" alt="Espetinho de Tulipa">
 
-</main>
+                <h3>Espetinho de Tulipa</h3>
 
-<script src="js/script.js"></script>
+                <p class="preco">R$ 11,50</p>
+
+                <button onclick="adicionar('Espetinho de Tulipa', 11,50)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/medalhão-de-frango.png" alt="Espetinho de Medalhão de Frango">
+
+                <h3>Espetinho de Medalhão de Frango</h3>
+
+                <p class="preco">R$ 14,00</p>
+
+                <button onclick="adicionar('Espetinho de Medalhão de Frango', 14)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="espetinho">
+                <img src="imagens/panceta-torresmo.jpg" alt="Espetinho de Panceta ">
+
+                <h3>Espetinho de Panceta</h3>
+
+                <p class="preco">R$ 11,50</p>
+
+                <button onclick="adicionar('Espetinho de Panceta', 11,50)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="bebida">
+                <img src="imagens/coca-cola-lata.jpg" alt="Coca-Cola Lata 350ml">
+
+                <h3>🥤 Coca-Cola Lata 350ml</h3>
+
+                <p class="preco">R$ 7,00</p>
+
+                <button onclick="adicionar('Coca-Cola Lata 350ml', 7)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="bebida">
+                <img src="imagens/guaraná-lata.jpg" alt="Guaraná Lata 350ml">
+
+                <h3>Guaraná Lata 350ml</h3>
+
+                <p class="preco">R$ 7,00</p>
+
+                <button onclick="adicionar('Guaraná Lata 350ml', 7)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="bebida">
+                <img src="imagens/guara-crac-original.jpg" alt="Guaraná Crac 290ml">
+
+                <h3>Guaraná Crac 290ml</h3>
+
+                <p class="preco">R$ 3,00</p>
+
+                <button onclick="adicionar('Guaraná Crac 290ml', 3)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="bebida">
+                <img src="imagens/limoneto.jpg" alt="Limoneto 500ml">
+
+                <h3>Limoneto 500ml</h3>
+
+                <p class="preco">R$ 8,00</p>
+
+                <button onclick="adicionar('Limoneto 500ml', 7)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="promocao">
+                <img src="imagens/promoção-compra4-leva5.jpg" alt="Pague 4 Leve 5 Espetinhos">
+
+                <h3>Pague 4 Leve 5 Espetinhos</h3>
+
+                <p class="preco">R$ 46,00</p>
+
+                <button onclick="adicionar('Pague 4 Leve 5 Espetinhos', 46)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="promocao">
+                <img src="imagens/promoção-quarta-maluca.jpg"
+                    alt="Cada Espetinho Carne, Frango com Bacon e Queijo Coalho sai por:">
+
+                <h3>Cada Espetinho Carne, Frango com Bacon e Queijo Coalho sai por:</h3>
+
+                <p class="preco">R$ 9,99</p>
+
+                <button onclick="adicionar('Cada Espetinho Carne, Frango com Bacon e Queijo Coalho sai por:', 9,99)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="combos">
+                <img src="imagens/combo-casal.jpg"
+                    alt="Combo Casal/ 4 Espetos de sua Escolha + Farofa + Vinagrete de (140g) + 2 Latas de Coca-Cola 350ml">
+
+                <h3>Combo Casal/ 4 Espetos de sua Escolha + Farofa + Vinagrete de (140g) + 2 Latas de Coca-Cola Lata
+                    350ml</h3>
+
+                <p class="preco">R$ 52,90</p>
+
+                <button
+                    onclick="adicionar('Combo Casal/  4 Espetos de sua Escolha + Farofa + Vinagrete de (140g) + 2 Latas de Coca-Cola 350ml', 52,90)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card" data-categoria="combos">
+                <img src="imagens/combo-solteiro.jpg"
+                    alt="Combo Solteiro/ 2 Espetos: Misto e Carne + Farofa + Vinagrete de (60g) + Latão de Império 473ml">
+
+                <h3>Combo Solteiro/ 2 Espetos: Misto e Carne + Farofa + Vinagrete de (60g) + Latão de Império 473ml</h3>
+
+                <p class="preco">R$ 25,50</p>
+
+                <button
+                    onclick="adicionar('Combo Solteiro/ 2 Espetos: Misto e Carne + Farofa + Vinagrete de (60g) + Latão de Império 473ml', 25,50)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div id="carrinho">
+
+                <h2>🛒 Carrinho</h2>
+
+                <div id="lista"></div>
+
+                <p>
+                    <strong>Total: R$ <span id="total">0.00</span></strong>
+                </p>
+
+                <button onclick="finalizarPedido()">
+                    📲 Finalizar Pedido
+                </button>
+
+            </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>

@@ -61,7 +61,7 @@ body {
     background: rgb(201, 198, 194);
 }
 
-.card img{
+.card img {
     width: 220px !important;
     height: 160px !important;
     object-fit: cover;
@@ -76,11 +76,11 @@ body {
     padding: 10px;
 }
 
-.card{
+.card {
     background: white;
     border-radius: 15px;
     padding: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
     overflow: hidden;
     max-width: 280px;
