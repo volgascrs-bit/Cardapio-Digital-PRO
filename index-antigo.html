@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Espetinho D'alu</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <h1>🔥 Espetinho D'alu</h1>
+        <p>Sabor que conquista no primeiro pedaço!</p>
+    </header>
+
+    <input type="text" id="pesquisa" placeholder="🔍 Pesquise um produto..." onkeyup="pesquisarProdutos()">
+
+    </button>
+
+    </div>
+
+    <h2>Dados do Cliente</h2>
+
+    <input type="text" id="nome" placeholder="Seu nome">
+
+    <input type="text" id="telefone" placeholder="Telefone">
+
+    <input type="text" id="endereco" placeholder="Endereço">
+
+    <select id="pagamento">
+        <option>Pix</option>
+        <option>Dinheiro</option>
+        <option>Cartão</option>
+    </select>
+
+    <textarea id="observacao" placeholder="Observações"></textarea>
+
+    <div id="carrinho">
+        🛒 Carrinho:
+
+        <div id="lista"></div>
+
+        <br>
+        💰 Total: R$ <span id="total">0.00</span>
+    </div>
+
+    <button onclick="finalizarPedido()">
+        📲 Finalizar Pedido
+    </button>
+
+    <main>
+        <h2>Nosso Cardápio</h2>
+
+        <div class="categorias">
+            <button onclick="filtrarCategoria('todos')">Todos</button>
+            <button onclick="filtrarCategoria('espetinho')">🍢 Espetinhos</button>
+            <button onclick="filtrarCategoria('bebida')">🥤 Bebidas</button>
+            <button onclick="filtrarCategoria('promocao')">🔥 Promoções</button>
+        </div>
+
+        <div class="produtos">
+
+        <div class="card" data-categoria="espetinho">
+
+            <img src="imagens/carne.jpg" alt="Espetinho de Carne">
+
+            <h3>🍢 Espetinho de Carne</h3>
+
+            <p class="preco">R$ 12,00</p>
+
+            <button onclick="adicionar('Espetinho de Carne', 12)">
+                Adicionar
+            </button>
+
+        </div>
+
+        <div class="card" data-categoria="espetinho">
+
+        <img src="imagens/Frango-com-Bacon.jpg" alt="Espetinho de Frango Bacon">
+
+        <h3>🍢 Espetinho de Frango com Bacon</h3>
+
+        <p class="preco">R$ 10,00</p>
+
+        <button onclick="adicionar('Espetinho de Frango com Bacon',10)">
+            Adicionar
+        </button>
+
+        </div>
+
+        <div class="card" data-categoria="espetinho">
+
+        <img src="imagens/Linguiça-Mineira.jpg" alt="Espetinho de Linguiça Mineira">
+
+        <h3>🍢 Espetinho de Linguiça Mineira</h3>
+
+        <p class="preco">R$ 11,00</p>
+
+        <button onclick="adicionar('Espetinho de Linguiça Mineira',11)">
+            Adicionar
+        </button>
+
+        </div>
+
+        <div class="card" data-categoria="espetinho">
+
+        <img src="imagens/Queijo-Coalho.jpg" alt="Espetinho de Queijo Coalho">
+
+        <h3>🍢 Espetinho de Queijo Coalho</h3>
+
+        <p class="preco">R$ 13.50</p>
+
+        <button onclick="adicionar('Espetinho de Queijo Coalho',13.50)">
+            Adicionar
+        </button>
+
+        </div>
+
+        <div class="card" data-categoria="bebida">
+
+        <img src="imagens/Coca-Cola-Lata-350ml.png" alt="Coca-Cola Lata 350ml">
+
+        <h3> </h3>Coca-Cola Lata 350ml </h3>
+
+        <p class="preco">R$ 6.50</p>
+
+        <button onclick="adicionar('Coca-Cola Lata 350ml',6.50)">
+            Adicionar
+        </button>
+
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
