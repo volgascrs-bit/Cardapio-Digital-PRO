@@ -12,10 +12,53 @@
 
 <body>
 
-    <header class="topo">
-        <h1>🔥 Espetinho D'alu</h1>
-        <p>Sabor que conquista no primeiro pedaço!</p>
-    </header>
+    <header class="hero">
+
+    <div class="hero-overlay">
+
+        <nav class="navbar">
+            <h1 class="logo">🍢 Espetinho D'alu</h1>
+
+            <a href="#cardapio" class="btn-menu">
+                Ver Cardápio
+            </a>
+        </nav>
+
+        <div class="hero-content">
+
+            <span class="status">
+                🟢 Aberto hoje
+            </span>
+
+            <h2>
+                O sabor da brasa que conquista!
+            </h2>
+
+            <p>
+                Espetinhos preparados na hora, bebidas geladas e promoções especiais para você.
+            </p>
+
+            <div class="hero-info">
+                ⭐ 4,9 • 📍 Maricá - RJ
+            </div>
+
+            <div class="hero-botoes">
+
+                <a href="#cardapio" class="btn-cardapio">
+                    🍢 Ver Cardápio
+                </a>
+
+                <a href="https://wa.me/5521998706243" target="_blank" class="btn-whatsapp">
+                    📲 Pedir Agora
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
 
     <section class="cliente">
 
@@ -37,7 +80,7 @@
 
     </section>
 
-    <main>
+    <main id="cardapio">
 
         <h2>Nosso Cardápio</h2>
 
@@ -112,7 +155,7 @@
 
                 <p class="preco">R$ 13,50</p>
 
-                <button onclick="adicionar('Espetinho de Queijo coalho', 13,50)">
+                <button onclick="adicionar('Espetinho de Queijo coalho', 13.50)">
                     Adicionar
                 </button>
             </div>
@@ -148,7 +191,7 @@
 
                 <p class="preco">R$ 11,50</p>
 
-                <button onclick="adicionar('Espetinho de Tulipa', 11,50)">
+                <button onclick="adicionar('Espetinho de Tulipa', 11.50)">
                     Adicionar
                 </button>
             </div>
@@ -172,7 +215,7 @@
 
                 <p class="preco">R$ 11,50</p>
 
-                <button onclick="adicionar('Espetinho de Panceta', 11,50)">
+                <button onclick="adicionar('Espetinho de Panceta', 11.50)">
                     Adicionar
                 </button>
             </div>
@@ -245,7 +288,7 @@
 
                 <p class="preco">R$ 9,99</p>
 
-                <button onclick="adicionar('Cada Espetinho Carne, Frango com Bacon e Queijo Coalho sai por:', 9,99)">
+                <button onclick="adicionar('Cada Espetinho Carne, Frango com Bacon e Queijo Coalho sai por:', 9.99)">
                     Adicionar
                 </button>
             </div>
@@ -260,7 +303,7 @@
                 <p class="preco">R$ 52,90</p>
 
                 <button
-                    onclick="adicionar('Combo Casal/  4 Espetos de sua Escolha + Farofa + Vinagrete de (140g) + 2 Latas de Coca-Cola 350ml', 52,90)">
+                    onclick="adicionar('Combo Casal/  4 Espetos de sua Escolha + Farofa + Vinagrete de (140g) + 2 Latas de Coca-Cola 350ml', 52.90)">
                     Adicionar
                 </button>
             </div>
@@ -274,7 +317,7 @@
                 <p class="preco">R$ 25,50</p>
 
                 <button
-                    onclick="adicionar('Combo Solteiro/ 2 Espetos: Misto e Carne + Farofa + Vinagrete de (60g) + Latão de Império 473ml', 25,50)">
+                    onclick="adicionar('Combo Solteiro/ 2 Espetos: Misto e Carne + Farofa + Vinagrete de (60g) + Latão de Império 473ml', 25.50)">
                     Adicionar
                 </button>
             </div>
